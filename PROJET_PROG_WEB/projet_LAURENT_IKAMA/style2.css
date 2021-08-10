@@ -1,0 +1,590 @@
+/* *************************************** page d'accueil et bases ***************************************  */
+
+body {
+
+    width:100%;
+}
+#header
+{
+    background-color: rgb(14, 69, 105)/*rgb(238, 168, 63)*/;
+    height:160px; 
+    /*text-align:center;*/
+    width:100%;
+}
+#content
+{
+    margin-bottom:30px;
+    width:100%;
+    height:100%;
+   
+}
+#footer
+{
+    background-color: rgb(55, 76, 90)/*grey*/;
+    
+    height:100px;
+    width:100%;
+}
+
+#myAllocine
+{
+    color: black;
+    font-size: x-large;
+    text-align: left;
+    text-align:center;
+}
+a
+{
+    color:rgb(238, 238, 238);
+    text-decoration: none;
+    font-family: serif; 
+    text-align:center;
+}
+a:hover
+{
+    color:black;
+}
+.liens 
+{
+    color:rgb(0, 0, 0);
+}
+input[class="item_titre"]
+{
+    text-decoration: none;
+    color:white;
+    margin: 0;
+    padding: 0;
+    
+    border: 0;
+    background: none; /* ou transparent je sais plus... */
+}
+#barreRecherche
+{
+    width:100%; 
+    display:flex; 
+    justify-content:center
+}
+#recherche 
+{ 
+    box-sizing: content-box;
+    border:none;
+    height: 50px;
+    outline: none;  
+    margin-bottom: 2px;
+    width:90%;
+    
+}
+#ID
+{
+    color: black;
+    border: 1px black solid;
+    text-align: center;
+    width:auto;
+
+}
+
+/* grand carrousel*/
+
+#gauche
+{
+    height:50px;
+    width:50px;
+    position: absolute;
+    left:5%;
+    top:50%;
+    border-radius: 80%;
+    opacity: 0.50;
+}
+#droite
+{
+    height:50px;
+    width:50px;
+    position: absolute;
+    right:5%;
+    top:50%;
+    border-radius: 80%;
+    opacity: 0.50;
+}
+
+.carousel
+{
+    background-color: white;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;/* Sur un ligne tout a ligne avec espace uniforme*/
+    align-items: center;
+}
+
+#Image
+{
+    width:100%;
+    height:100%;
+} 
+
+.item
+{
+    width:80%;
+    height:90%;
+    margin: 40px 10px;
+    box-shadow: 0 15px 35px #3232321a, 0 5px 15px #0000001a;
+}
+
+.item_image
+{
+    width:100%;
+    height:85%;
+}
+.item_body
+{
+    padding: 25px;
+    background-color: black;
+    opacity:0.30;
+    height:15%;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+}
+.item_titre
+{
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+#button[class="item_titre"]
+{
+
+    width:auto;
+
+}
+/* petit carrousel pour les acteurs et réalisateur*/
+.classement
+{
+    position:relative; 
+    left:5%;
+    background-color: rgb(202, 202, 202);
+    width:90%;
+    height:250px;
+    margin-bottom: 10px;
+}
+.headClassement
+{
+    background-color: rgb(68, 142, 190)/*#fdd10d*/;
+    color:white;
+    text-align: center;
+    font-family: serif;
+    width:100%;
+    height:50px;  
+    display: flex;
+    align-items:center;
+    justify-content:space-around;
+}
+
+.classement-item 
+{
+    width: 100%;
+    height: 200px;
+    background: /*#8C8$*/rgb(135, 156, 170);
+    overflow: hidden;
+    display: flex;
+    flex-direction:row;
+    justify-content:center
+
+}
+.col-1 > #droite
+{
+    font-weight: bold;
+    width:5px;
+    position: absolute;
+    right:5%;
+    top:50%;
+    color:white;
+    font-size:x-large;
+}
+.col-1 > #gauche
+{
+    font-weight: bold;
+    width:5px;
+    position: absolute;
+    left:5%;
+    top:50%;
+    color:white;
+    font-size:x-large;
+}
+
+input[id=button2]
+{
+    align-self: center;
+    text-align: center;
+    color:white;
+    font-family: serif;
+    font-size:x-large;
+    background-color:transparent;
+    text-decoration: none;
+    border:none;
+    height:100%;
+    width:80%;
+    white-space: initial;
+
+  
+}
+ .col-5> img
+{
+    height:auto;
+    width:100%;
+}
+  
+/*  *************************************** Petit carousel des 10 meilleurs films *************************************** */
+
+input[type=radio] 
+{
+    display: none;
+}
+
+.cards 
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.card 
+{
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform .4s ease;
+    cursor: pointer;
+    background-color:transparent;
+}
+label>img
+{
+    height:100%;
+    width:auto;
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+}
+  
+  
+#item-1:checked ~ .cards #film-10, #item-2:checked ~ .cards #film-1, #item-3:checked ~ .cards #film-2, #item-4:checked ~ .cards #film-3, #item-5:checked ~ .cards #film-4, #item-6:checked ~ .cards #film-5, #item-7:checked ~ .cards #film-6, #item-8:checked ~ .cards #film-7, #item-9:checked ~ .cards #film-8, #item-10:checked ~ .cards #film-9 {
+transform: translatex(-40%) scale(.8);
+opacity: .4;
+z-index: 0;
+}
+
+#item-1:checked ~ .cards #film-2, #item-2:checked ~ .cards #film-3,  #item-3:checked ~ .cards #film-4,  #item-4:checked ~ .cards #film-5,  #item-5:checked ~ .cards #film-6, #item-6:checked ~ .cards #film-7,  #item-7:checked ~ .cards #film-8, #item-8:checked ~ .cards #film-9, #item-9:checked ~ .cards #film-10,#item-10:checked ~ .cards #film-1 {
+transform: translatex(40%) scale(.8);
+opacity: .4;
+z-index: 0;
+}
+
+#item-1:checked ~ .cards #film-1, #item-2:checked ~ .cards #film-2, #item-3:checked ~ .cards #film-3 , #item-4:checked ~ .cards #film-4,#item-5:checked ~ .cards #film-5, #item-6:checked ~ .cards #film-6, #item-7:checked ~ .cards #film-7, #item-8:checked ~ .cards #film-8, #item-9:checked ~ .cards #film-9, #item-10:checked ~ .cards #film-10
+{
+transform: translatex(0) scale(1);
+opacity: 1;
+z-index: 1;
+}
+ 
+  
+/* *************************************** page identification ***************************************  */
+
+.bloc /* Bloc gris */
+{
+    background-color: rgb(202, 202, 202);
+    width:90%;
+    height:450px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-content:space-around;
+    align-items:center;
+}
+.headBloc
+{
+    background-color:white;
+    color:black;
+    text-align: center;
+    width:300px;
+    height:50px;  
+}
+
+#contentInput /*NOM et Premon*/
+{
+    width: 100%;
+    outline: none;
+}
+
+input
+{
+    width: 400px;;
+    height: 45px;
+    outline: none;
+    /*background: transparent;*/
+}
+
+#button
+{
+    background-color:black;
+    color:white;
+    font-size: medium;
+    text-align: center;
+    width:200px;
+    height:50px;  
+}
+
+/*  *************************************** Page Preferences  *************************************** */
+.image
+{
+    height:50px;
+    width: 50px;
+    background-color:black;
+    color:white;
+}
+
+#preferenceDeco
+{
+    position:absolute;
+    right:15px;
+    bottom:0px;
+ }
+
+.bloc > form 
+{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-content:space-around;
+    align-items:center;
+}
+
+/* Changement de couleur */
+nav > ul { 
+    list-style:none; 
+}
+nav > ul > li { 
+    display:inline-block; 
+}
+/* button */
+.btncolor {
+    background-color:rgb(14, 69, 105)/* rgb(238, 168, 63)*/;
+    color: black;
+    cursor:pointer;
+    border: none;
+    border-radius:50px;
+    height: 40px;
+    width: 40px;
+}
+.btncolor.red {
+    background-color: red;
+    color: black;
+}
+.btncolor.blue {
+    background-color: blue;
+    color: black;
+}
+.btncolor.green {
+    background-color: green;
+    color: black;
+}
+.btncolor.yellow {
+    background-color: yellow;
+    color: black;
+}
+.btncolor.pink {
+    background-color: pink;
+    color: black;
+}
+.btncolor.gray {
+    background-color: gray;
+    color: black;
+}
+
+/* changement de police */
+
+
+/* button */
+
+.btn-primary {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* lien des bouton avec les couleurs de fond */
+
+body.red #header,body.red  #header a, body.red #footer,body.red .headClassement {
+    background-color: red !important;
+    color: black !important;
+}
+
+body.blue #header, body.blue #footer, body.blue .headClassement {
+    background-color: blue !important;
+}
+
+body.green #header, body.green #footer, body.green .headClassement {
+    background-color: green !important;
+}
+
+body.yellow #header, body.yellow #header a , body.yellow #footer, body.yellow .headClassement {
+    background-color: yellow !important;
+    color:black;
+}
+
+body.pink #header, body.pink #footer, body.pink .headClassement 
+{
+  background-color: pink !important;
+}
+
+body.gray #header, body.gray #footer, body.gray .headClassement
+{
+    background-color: gray !important;
+}
+
+
+/*  *************************************** Page Film *************************************** */
+#titreBoxFilm
+{
+    text-align:center;
+}
+
+#titreFilm
+{
+    font-family:'New Times Roman';
+    text-align: center;
+    width:100%;
+}
+
+#afficheFilm
+{
+    height:300px;
+    width: 200px;
+    margin: 5px;
+}
+
+#resumeFilm
+{
+    width:auto;
+    height:200px;
+    overflow: scroll;
+    color: black;
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+.classementEtoile
+{
+    background-color: rgb(202, 202, 202);
+    width:90%;
+    height:117px;
+    margin-bottom: 10px;
+}
+/* le systeme de notation */
+.EtoileBox
+{  
+    width:100%;
+    height: 20%;
+    margin-top: 0px;
+    border: 1px solid #CCC; 
+    overflow: visible; 
+    padding: 10px; 
+    position: relative; 
+    box-shadow: 0 15px 35px #3232321a, 0 5px 15px #0000001a;
+    display: flex;
+    align-items: space-around;
+    justify-content: center;
+    direction:rtl;
+}
+
+.etoile
+{
+    height:45px;
+    width: auto;
+    float: left;
+}
+
+.etoile:hover, .etoile:focus, .etoile:hover ~ .etoile, .etoile:focus ~ .etoile
+{
+    background-image: url('image/star_jaune.png'); 
+    background-size: 100% auto;
+    cursor: pointer;
+}
+
+.etoilem
+{
+    margin-top:0px;
+    border-top:0px;
+}
+/*  *************************************** Page Individu *************************************** */
+.filmographie
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-content:space-around;
+    align-items: flex-start;
+}
+
+#titreFilmogrparagraphie
+{
+    font-family: 'Times New Roman';
+    
+}
+#imageFilmogragraphie
+{
+    height:200px;
+    width:150px;  
+    margin-bottom: 10px; 
+}
+#imageFilmogragraphie {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+#imageFilmogragraphie:hover {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+/* ************************************************************* 
+
+.row
+{
+    border: 1px solid red;
+}
+.col, .col-sm-12, .col-md-4, .col-lg-4, .col-10, .col-sm-10, .d-none, .d-lg-block, .col-2
+{
+    border: 1px solid black;
+} 
+*/
+/*  *************************************** Forum *************************************** */
+.mess
+{
+    margin-top:1px;
+    background-color:transparent;
+}
+
+ .mess1
+{
+    overflow: scroll;
+    height: 50%;
+    background-color: transparent;
+}
+.classement > div > input[type=submit]
+{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+#InputAvis
+{
+    width:100%;
+    height: 45px;
+    outline: none;
+    background: transparent;
+}
